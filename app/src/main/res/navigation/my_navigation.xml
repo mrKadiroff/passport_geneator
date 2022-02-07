@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/glavniFragment">
+
+    <fragment
+        android:id="@+id/glavniFragment"
+        android:name="com.example.passport.fragments.GlavniFragment"
+        android:label="fragment_glavni"
+        tools:layout="@layout/fragment_glavni" >
+        <action
+            android:id="@+id/action_glavniFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_glavniFragment_to_citizensFragment"
+            app:destination="@id/citizensFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.passport.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/citizensFragment"
+        android:name="com.example.passport.fragments.CitizensFragment"
+        android:label="fragment_citizens"
+        tools:layout="@layout/fragment_citizens" >
+        <action
+            android:id="@+id/action_citizensFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.passport.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tooolbaradd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#52CA6C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:text="Fuqarolarning ma'lumotlarini qo'shish"
+                android:textSize="19sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Fuqaroning ismi"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tooolbaradd" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:ems="10"
+            android:hint="Fuqaroning familiyasi"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <EditText
+            android:id="@+id/father_name"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:ems="10"
+            android:hint="Otasining ismi"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/surname" />
+
+        <Spinner
+            android:id="@+id/vil_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:background="#D1D0D0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/father_name" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:ems="10"
+            android:hint="Shaxar,tuman"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vil_spinner" />
+
+        <EditText
+            android:id="@+id/home_addres"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:gravity="center"
+            android:ems="10"
+            android:hint="Uyning manzili"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city" />
+
+
+        <EditText
+            android:id="@+id/time_pass"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:ems="10"
+            android:hint="Passport olgan vaqti"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_addres" />
+
+        <EditText
+            android:id="@+id/duration_pass"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edittext_bg"
+            android:backgroundTint="#D1D0D0"
+            android:gravity="center"
+            android:ems="10"
+            android:hint="Passport muddati"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#A8A3A3"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_pass" />
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:background="#D1D0D0"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duration_pass" />
+
+        <ImageView
+            android:id="@+id/rasm"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gender" />
+
+        <TextView
+            android:id="@+id/teks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/rasm"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:text="Fuqaroning 3x4 rasmi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add"
+            android:layout_width="119dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Saqlash"
+            android:textAllCaps="false"
+            android:layout_marginBottom="75dp"
+            android:layout_marginTop="43dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teks"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+</ScrollView>
