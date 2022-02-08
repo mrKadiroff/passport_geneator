@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.passport.R
 import com.example.passport.databinding.FragmentCitizensBinding
 import com.example.passport.databinding.FragmentResultBinding
@@ -52,7 +53,7 @@ class ResultFragment : Fragment() {
 
     private fun setValue() {
         val valuee = arguments?.getSerializable("malum") as Malumotlar
-        binding.teks.text = valuee.name
+        binding.teks.text = "${valuee.name} ${valuee.surname}"
         binding.rasm.setImageURI(Uri.parse(valuee.image))
         binding.ism.text = "${valuee.surname} ${valuee.name} ${valuee.fathername}"
         binding.vil.text = "Viloyati: ${valuee.region}"
@@ -60,6 +61,9 @@ class ResultFragment : Fragment() {
         binding.timee.text = "Passport olgan vaqti: ${valuee.timePass}"
         binding.muddati.text = "Passport muddati: ${valuee.durationpass}"
         binding.pol.text = "Jinsi: ${valuee.gender}"
+        binding.back.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     companion object {

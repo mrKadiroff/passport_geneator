@@ -24,8 +24,9 @@
 
             <ImageView
                 android:id="@+id/back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="20sp"
                 android:src="@drawable/ic_baseline_arrow_back_ios_24"
                 android:layout_gravity="start"/>
 
@@ -34,8 +35,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginEnd="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="12dp"
                 android:textColor="@color/white"
-                android:text="Fuqarolarning ma'lumotlarini qo'shish"
+                android:text="Sanjar Suvonov"
                 android:textSize="19sp"/>
 
         </androidx.appcompat.widget.Toolbar>
@@ -55,7 +61,7 @@
             android:id="@+id/ism"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
+           android:gravity="center"
             android:layout_marginTop="24dp"
             android:paddingEnd="12dp"
             android:text="Kadirov Shoxrux Shavkato'g'li"
@@ -66,7 +72,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rasm"
-            app:layout_constraintVertical_bias="0.18" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/malum"

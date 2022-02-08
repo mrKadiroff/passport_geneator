@@ -18,6 +18,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/white" >
 
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="18sp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_gravity="start"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/white"
+            android:text="Fuqaro ma'lumotlari"
+            android:textSize="18sp"/>
 
     </androidx.appcompat.widget.Toolbar>
 

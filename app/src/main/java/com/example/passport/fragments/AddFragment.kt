@@ -200,6 +200,7 @@ class AddFragment : Fragment() {
                             malumotlar.image = fileAbsolutePath
                             appDatabase.passportDao().addPassport(malumotlar)
                             dialog.dismiss()
+                            findNavController().popBackStack()
                         } else{
                             Toast.makeText(binding.root.context, "Malumotlarni aniq va to'liq kiritganingizga ishonch hosil qiling", Toast.LENGTH_SHORT).show()
                         }
@@ -322,6 +323,7 @@ class AddFragment : Fragment() {
                         malumotlar.image = fileAbsolutePath
                         appDatabase.passportDao().addPassport(malumotlar)
                         dialog.dismiss()
+                        findNavController().popBackStack()
                     } else{
                         Toast.makeText(binding.root.context, "Malumotlarni aniq va to'liq kiritganingizga ishonch hosil qiling", Toast.LENGTH_SHORT).show()
                     }

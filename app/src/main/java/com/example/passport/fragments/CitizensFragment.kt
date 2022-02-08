@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.passport.MainActivity
 import com.example.passport.R
 import com.example.passport.adapters.PassportAdapter
 import com.example.passport.database.AppDatabase
@@ -31,6 +32,7 @@ class CitizensFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -47,9 +49,13 @@ class CitizensFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentCitizensBinding.inflate(inflater,container,false)
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.tooolbaradd)
 
-        setHasOptionsMenu(true)
+
+
+
         appDatabase = AppDatabase.getInstance(binding.root.context)
+
 
         list = ArrayList()
         list.addAll(appDatabase.passportDao().getAllPassport())
@@ -67,7 +73,23 @@ class CitizensFragment : Fragment() {
         })
         binding.pasportRv.adapter = passportAdapter
 
+        binding.tooolbaradd.setTitle(null)
+        binding.back.setOnClickListener {
+            findNavController().popBackStack()
+        }
+//        binding.tooolbaradd.setTitle("")
+
 //        binding.tooolbaradd.inflateMenu(R.menu.menu_item)
+//        binding.tooolbaradd.setOnMenuItemClickListener {
+//
+//            if (it.itemId == R.id.search_action){
+//
+//            }
+//
+//            true
+//        }
+
+
 
 
 
@@ -92,7 +114,7 @@ class CitizensFragment : Fragment() {
                 val searchText = newText!!.toLowerCase(Locale.getDefault())
                 if (searchText.isNotEmpty()){
                     list.forEach {
-                        if (it.name?.toLowerCase(Locale.getDefault())!!.contains(searchText)){
+                        if ("${it.name} ${it.surname}"?.toLowerCase(Locale.getDefault())!!.contains(searchText)){
 
                             tempArrayList.add(it)
                         }

@@ -13,7 +13,8 @@ class PassportAdapter (var list: List<Malumotlar>,var onItemClickListener: OnIte
         RecyclerView.ViewHolder(malumotItemBinding.root) {
 
         fun onBind(malumotlar: Malumotlar,position: Int) {
-          malumotItemBinding.name.text = malumotlar.name
+          malumotItemBinding.name.text = "${malumotlar.name} ${malumotlar.surname}"
+
 
 
             val min = 20
